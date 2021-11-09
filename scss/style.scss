@@ -1,0 +1,188 @@
+$colorPrincipal: rgb(255, 27, 27);
+
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+    }
+
+body{
+    // background: #8E0E00;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ad9696);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ad9696); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    // background: rgb(255,255,255);
+    // background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(208,208,208,1) 100%);
+}
+
+header{
+    height: 100vh;
+    nav{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+        img{
+            display:scroll;
+            position:fixed;
+            bottom:0px;
+            right:0px;
+            width:100px;
+        }
+        i{
+            font-size: 2em;
+        }
+    }
+    .contenedorImg{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+    }
+    .redes{
+        display: flex;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+            padding: 5px;
+        }
+    }
+    .flecha{
+        font-size: 3em;
+        text-align: center;
+        padding-top: 10%;
+        animation: arrow 1s ease-in-out infinite;
+    }
+    @keyframes arrow {
+        0% {
+        transform: translate(0px, 50px);
+        }
+        50% {
+        transform: translate(0px, 60px);
+        }
+        100% {
+        transform: translate(0px, 50px);
+        }
+        }
+}
+
+.myStory{
+    display: flex;
+    flex-direction: column;
+    &__columna1{
+        text-align:center;
+        h2{
+            font-size: 5em;
+            p{
+                color: $colorPrincipal;
+            }
+        }
+    }
+    &__columna2{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__text{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 1.3em;
+    }
+}
+
+.misFotos{
+    h2{
+        font-size: 4em;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    &__galeria{
+        display: flex;
+        padding: 5px;
+        flex-wrap: wrap;
+        .columna{
+            flex: 50%;
+            padding: 5px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        // font-size: 4em; PARA COMPLETA
+        font-size: 2em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        span{
+            color: $colorPrincipal;
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    header{
+        .contenedorImg{ 
+                img{
+                    width: 100vh; 
+                }
+        }
+        .redes{
+            a{
+                font-size: 1.2em;
+            }
+        }
+        .flecha{
+            visibility: hidden
+        }
+    }
+    
+    .myStory{
+        flex-direction: row;
+        height: 100vh;
+        &__columna1{
+            width: 55%;
+        }
+        &__columna2{
+            width: 45%;
+            img{
+                width: auto;
+                height: 80vh;
+            }
+        }
+    }
+    
+    .misFotos{
+        &__galeria{
+            .columna{
+                flex: 25%;
+            }
+
+        }
+    }
+    
+    .instagram{
+        &__title{
+            font-size: 4em;
+        }
+    }
+}
