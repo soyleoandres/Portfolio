@@ -12,7 +12,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 header {
-  height: 100vh; }
+  padding-bottom: 30px; }
   header nav {
     display: flex;
     justify-content: space-around;
@@ -36,12 +36,12 @@ header {
       height: auto; }
   header .redes {
     display: flex;
+    align-items: center;
     justify-content: space-around; }
     header .redes a {
       text-decoration: none;
       display: flex;
       align-items: center;
-      font-size: 2em;
       padding: 5px; 
       font-weight: bold;
       background: linear-gradient(#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80 );
@@ -68,15 +68,18 @@ header {
     flex: 70%;
     text-align: center; }
     .myStory__columna1 h2 {
-      font-size: 5em; }
+      font-size: 4em; }
       .myStory__columna1 h2 p {
         color: #ff1b1b; }
   .myStory__columna2 {
     flex:30%;
-    width: 100%;
-    height: auto; 
+    
     display: flex;
     align-items: center;
+  }
+  .myStory__columna2 img{
+    width: 100%;
+    height: auto; 
   }
   .myStory__text {
     padding-left: 3rem;
@@ -113,6 +116,9 @@ header {
       color: #ff1b1b; }
 
 @media only screen and (min-width: 750px) {
+  header{
+    height: 100vh;
+  }
   header .contenedorImg img {
     width: 100vh; }
   header .redes a {
@@ -124,6 +130,8 @@ header {
     height: 100vh; }
     .myStory__columna1 {
       width: 55%; }
+      .myStory__columna1 h2 {
+        font-size: 5em; }
     .myStory__columna2 {
       width: 45%; }
       .myStory__columna2 img {
